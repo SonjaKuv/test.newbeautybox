@@ -1,0 +1,14 @@
+{
+    "banners": {
+       "1": {
+            "ID": 1,
+            "TITLE": "Дарим подарок при оплате заказа на сайте",
+            "DESCRIPTION": "Оплатите заказ сейчас и получите подарок на 600₽ — Beautific Hydra Drops сыворотка-бустер увлажнения с 3 видами гиалуроновой кислоты и витамином В5",
+            "DESKTOP_BANNER_SRC": "/bitrix/images/banners/banner-desktop.png",
+            "MOBILE_BANNER_SRC": "/bitrix/images/banners/banner-mobile.png",
+            "PRICE": "500",
+            "GIFT_PRICE": "0",
+            "PRODUCT_VOLUME": "50 мл"
+        }        
+    }
+}

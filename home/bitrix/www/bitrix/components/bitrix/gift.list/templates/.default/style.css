@@ -1,0 +1,288 @@
+.banner-overlay {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 100;
+    opacity: 1;
+    background: rgba(61, 61, 61, 0.3);
+    
+}
+
+.popup-enter-active,
+.popup-leave-active {
+   transition: opacity 0.3s ease-in-out; 
+}
+
+.popup-enter-from,
+.popup-leave-to {
+  opacity: 0;
+}
+
+.banner-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 30px 0;
+}
+
+.banner-popup {
+    min-width: 320px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 746px;
+    max-width: 1000px;
+    margin: auto;
+    background: #DFF8EF;
+    border-radius: 5px;
+    z-index: 101;
+}
+
+.banner-popup__close {
+    position: absolute;
+    top: 13px;
+    right: 13px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.banner-popup__close-line {
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    background: #000;
+    pointer-events: none;
+}
+
+.banner-popup__close-line:nth-child(1) {
+    transform: rotate(45deg);
+}
+
+.banner-popup__close-line:nth-child(2) {
+    transform: rotate(-45deg);
+}
+
+.banner-popup__label {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    font: 400 12px/14px "Roboto", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #000;
+    background: rgba(255, 255, 255, .6);
+    backdrop-filter: blur(20px);
+    padding: 4px 5px 3px 6px;
+}
+
+.banner-popup__img img {
+    display: block;
+    aspect-ratio: 346 / 534;
+    object-fit: cover;
+}
+
+.banner-popup__info {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 25px 32px;
+}
+
+.banner-popup__title {
+    font: 800 33px/38px "Circe", sans-serif;
+    margin-bottom: 14px;
+}
+
+.banner-popup__description {
+    font: 400 16px/20px "Circe", sans-serif;
+    margin-bottom: 21px;
+}
+
+.banner-popup__product {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 62px;
+}
+
+.banner-popup__gift-price {
+    font: 800 25px/29px "Circe", sans-serif;
+    margin-right: 9px;
+    color: #000;
+}
+
+.banner-popup__price {
+    font: 400 16px/19px "Circe", sans-serif;
+    color: #6D798A;
+    text-decoration: line-through;
+}
+
+.banner-popup__volume {
+    font: 400 16px/19px "Circe", sans-serif; 
+    color: #000;
+    margin-left: auto;
+}
+
+.banner-popup__payment {
+    display: grid;
+    gap: 1px 14px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+}
+
+.banner-popup__payment-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    border-radius: 1px;
+    border: none;
+    text-decoration: none;
+    padding: 11px;
+    font: 700 14px/15px "Circe", sans-serif;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    transition: all .3s linear;
+}
+
+.banner-popup__payment-link:nth-child(1) {
+    background-color: #B3F3DC;
+    color: #3A7E66;
+}
+
+.banner-popup__payment-link:nth-child(2) {
+    background-color: #000;
+    color: #fff;
+}
+
+.banner-popup__payment-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    grid-column: 2;
+}
+
+.banner-popup__payment-icons span {
+    width: 28px;
+    height: 19px;
+}
+
+.banner-popup__payment-icons .visa {
+    background-image: url('/bitrix/images/payment/visa.png');
+}
+
+.banner-popup__payment-icons .master-card {
+    background-image: url('/bitrix/images/payment/mc.png');
+}
+
+.banner-popup__payment-icons .apple-pay {
+    background-image: url('/bitrix/images/payment/apple-pay.png');
+}
+
+.banner-popup__payment-icons .google-pay {
+    background-image: url('/bitrix/images/payment/google-pay.png');
+}
+
+.banner-popup__payment-icons .mir {
+    background-image: url('/bitrix/images/payment/mir.png');
+}
+
+@media screen and (max-width: 767px) {
+    .banner-popup {
+        width: 320px;
+        flex-direction: column;
+        border-radius: 0;
+    }
+
+    .banner-popup__close { 
+        display: none;
+    }
+
+    .banner-popup__label {
+        top: 14px;
+    }
+
+    .banner-popup__img img {
+        object-fit: cover;
+        aspect-ratio: 320 / 274;
+        height: 274px;
+        object-position: top;
+        width: 100%;
+    }
+
+    .banner-popup__info {
+        padding: 24px 16px 21px;
+    }
+
+    .banner-popup__title {
+        font-weight: 700;
+        font-size: 27px;
+        line-height: 31px;
+        margin-bottom: 8px;
+    }
+    
+    .banner-popup__description {
+        font-size: 13px;
+        line-height: 16px;
+        margin-bottom: 8px;
+    }
+
+    .banner-popup__product {
+        margin-bottom: 18px;
+    }
+
+    .banner-popup__gift-price {
+        font-size: 18px;
+        line-height: 21px;
+        margin-right: 5px;
+    }
+
+    .banner-popup__price {
+        font-size: 11px;
+        line-height: 13px;
+    }
+
+    .banner-popup__volume {
+        font-size: 13px;
+        line-height: 15px;
+    }
+
+    .banner-popup__payment {
+        gap: 1px 8px;
+    }
+
+    .banner-popup__payment-link {
+        font-size: 12px;
+        line-height: 13px;
+        min-height: 48px;
+        padding: 7px;
+    }
+
+    .banner-popup__payment-link:nth-child(1) {
+        border: 1px solid #000;
+        background: transparent;
+        color: #000;
+    }
+
+    .banner-popup__payment-icons {
+        gap: 0;
+    }
+}
+
+.banner-popup__payment-link:hover {
+    background-color: #6b59a2;
+    color: #fff;
+    border: 1px solid transparent;
+}
